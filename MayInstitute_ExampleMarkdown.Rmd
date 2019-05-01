@@ -1,0 +1,33 @@
+---
+title: "MarkdownExample_AdvancedR"
+author: "Alison Ross"
+date: "5/1/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+knit = creates the R markdown documeent, runs code and text
+
+insert chunk of code with code --> insert chunk or just "```"
+
+name the chunk like so: {r name}
+
+{r, include=FALSE} prevents inclusion of code and results
+
+{r, echo=false} prevents inclusion of code but results are
+
+{r correlation, results="hide"} shows code, no results
+
+```{r import ggplot, include=FALSE}
+library(ggplot2)
+```
+
+for plots:
+```{r, fig.width=4, fig.height=4, fig.cap="Caption"}
+ggplot(cars, aes(x=speed, y=dist)) + geom_point() + ggtitle("My plot with different width and height") + labs(x="speed", y="distance")
+```
+
+if you just want to use the command line etc there are ways to run it outside of Rstudio.
